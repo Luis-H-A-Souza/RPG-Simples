@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Combate {
 	Scanner sc = new Scanner(System.in);
+	Funcao fc = new Funcao();
 	private Heroi heroi;
 	private Inimigo inimigo;
 
@@ -30,7 +31,7 @@ public class Combate {
 
 	public void turnoJogador() {
 		int aux = 0;
-		System.out.println("\nEscolha o que deseja fazer:");
+		System.out.println("Escolha o que deseja fazer:");
 		do {
 			System.out.println("1 - Ataque Básico\n2 - Ataque Especial");
 			System.out.print("\nInforme sua ação: ");
@@ -42,29 +43,34 @@ public class Combate {
 		System.out.println();
 		if (aux == 1) {
 			int dano = heroi.atacar();
+			fc.Leitura();
 			inimigo.receberDano(dano);
 		} else {
 			int dano = heroi.ataqueEspecial();
+			fc.Leitura();
 			inimigo.receberDano(dano);
 		}
 	}
 
 	public void turnoInimigo() {
 		int dano = inimigo.atacar();
+		fc.Leitura();
 		heroi.receberDano(dano);
 	}
 
 	public void iniciarCombate() {
-		System.out.println(heroi.getNome() + " Versus " + inimigo.getNome());
+		System.out.println(heroi.getNome() + " Versus " + inimigo.getNome() + "\n");
 		do {
 			turnoJogador();
+			fc.Leitura();
 			if (inimigo.estaVivo()) {
 				turnoInimigo();
+				fc.Leitura();
 			}
 		} while (heroi.estaVivo() && inimigo.estaVivo());
 
 		if (heroi.estaVivo()) {
-			System.out.println(heroi.getNome() + "Venceu o combate!");
+			System.out.println(heroi.getNome() + " Venceu o combate!");
 		} else {
 			System.out.println(inimigo.getNome() + "Venceu o combate!");
 		}

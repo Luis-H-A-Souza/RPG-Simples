@@ -16,7 +16,7 @@ class Goblin extends Inimigo {
 
 	@Override
 	public int atacar() {
-		System.out.println(getNome() + " te apunhala!");
+		System.out.println(getNome() + " te apunhala!\n");
 		return getAtaque();
 	}
 	
@@ -29,7 +29,7 @@ class Orc extends Inimigo {
 
 	@Override
 	public int atacar() {
-		System.out.println(getNome() + " avança ferozmente!");
+		System.out.println(getNome() + " avança ferozmente!\n");
 		return getAtaque();
 	}
 }
@@ -41,7 +41,7 @@ class Dragão extends Inimigo {
 
 	@Override
 	public int atacar() {
-		System.out.println(getNome() + " lança uma baforada de fogo");
+		System.out.println(getNome() + " lança uma baforada de fogo\n");
 		return getAtaque();
 	}
 	

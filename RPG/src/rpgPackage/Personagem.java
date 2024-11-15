@@ -49,7 +49,7 @@ public abstract class Personagem {
 
 	public void receberDano(int dano) {
 		setVida(getVida() - Math.max(dano - getDefesa(), 0));
-		System.out.println(getNome() + " Recebeu " + dano + " de dano!\nVida restante: " + getVida());
+		System.out.println(getNome() + " Recebeu " + dano + " de dano!\nVida restante: " + getVida() + "\n");
 	}
 
 	public boolean estaVivo() {
