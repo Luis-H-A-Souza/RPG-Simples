@@ -24,11 +24,6 @@ public class Combate {
 		this.inimigo = inimigo;
 	}
 
-	public Combate(Heroi heroi, Inimigo inimigo) {
-		this.heroi = heroi;
-		this.inimigo = inimigo;
-	}
-
 	public void turnoJogador() {
 		int aux = 0;
 		System.out.println("Escolha o que deseja fazer:");
@@ -58,8 +53,12 @@ public class Combate {
 		heroi.receberDano(dano);
 	}
 
-	public void iniciarCombate() {
+	public void iniciarCombate(Heroi heroi, Inimigo inimigo) {
+		this.heroi = heroi;
+		this.inimigo = inimigo;
 		System.out.println(heroi.getNome() + " Versus " + inimigo.getNome() + "\n");
+		System.out.println(inimigo.getNome() + ":\nVida: " + inimigo.getVida() + "\nAtaque: " + inimigo.getAtaque()
+				+ "\nDefesa: " + inimigo.getDefesa() + "\n");
 		do {
 			turnoJogador();
 			fc.Leitura();

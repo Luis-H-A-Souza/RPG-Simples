@@ -48,7 +48,7 @@ public abstract class Personagem {
 	public abstract int atacar();
 
 	public void receberDano(int dano) {
-		setVida(getVida() - Math.max(dano - getDefesa(), 0));
+		setVida(Math.max(getVida() - Math.max(dano - getDefesa(), 0), 0));
 		System.out.println(getNome() + " Recebeu " + dano + " de dano!\nVida restante: " + getVida() + "\n");
 	}
 

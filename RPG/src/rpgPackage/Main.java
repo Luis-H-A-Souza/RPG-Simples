@@ -5,9 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		Heroi jogador = new Guerreiro("Arthur");
 		Inimigo inimigo = new Goblin();
-		Combate combate = new Combate(jogador, inimigo);
+		Combate combate = new Combate();
 		
-		combate.iniciarCombate();
+		combate.iniciarCombate(jogador, inimigo);
 	}
 
 }

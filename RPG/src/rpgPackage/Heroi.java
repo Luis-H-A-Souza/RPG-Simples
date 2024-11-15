@@ -12,7 +12,7 @@ public abstract class Heroi extends Personagem {
 	}
 
 	public Heroi(String nome, int vida, int ataque, int defesa, int mana) {
-		super(nome, vida, defesa, ataque);
+		super(nome, vida, ataque, defesa);
 		this.mana = mana;
 	}
 
