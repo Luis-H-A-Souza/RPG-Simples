@@ -48,12 +48,12 @@ public abstract class Personagem {
 	public abstract int atacar();
 
 	public void receberDano(int dano) {
-		vida -= Math.max(dano - defesa, 0);
-		System.out.println(nome + " Recebeu " + dano + " de dano!\nVida restante: " + vida);
+		setVida(getVida() - Math.max(dano - getDefesa(), 0));
+		System.out.println(getNome() + " Recebeu " + dano + " de dano!\nVida restante: " + getVida());
 	}
 
 	public boolean estaVivo() {
-		return vida > 0;
+		return getVida() > 0;
 	}
 }
 

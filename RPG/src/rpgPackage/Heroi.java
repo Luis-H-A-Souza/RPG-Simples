@@ -23,7 +23,7 @@ public abstract class Heroi extends Personagem {
 class Guerreiro extends Heroi {
 
 	public Guerreiro(String nome) {
-		super(nome, 100, 10, 20, 30);
+		super(nome, 100, 20, 20, 30);
 	}
 
 	@Override
@@ -48,7 +48,7 @@ class Guerreiro extends Heroi {
 class Mago extends Heroi {
 
 	public Mago(String nome) {
-		super(nome, 50, 20, 5, 100);
+		super(nome, 50, 25, 5, 100);
 	}
 
 	@Override
@@ -56,7 +56,7 @@ class Mago extends Heroi {
 		if (getMana() >= 20) {
 			setMana(getMana() - 20);
 			System.out.println(getNome() + " Conjura uma tempestade de raios!");
-			return getAtaque() * 3;
+			return getAtaque() * 2;
 		} else {
 			System.out.println("Mana insuficiente, " + getNome() + " lança uma bola de fogo!");
 			return getAtaque();
@@ -88,7 +88,7 @@ class Arqueiro extends Heroi {
 		if (getMana() >= 15) {
 			setMana(getMana() - 15);
 			System.out.println(getNome() + " lança uma saraivada de flechas!");
-			return getAtaque() * 2;
+			return getAtaque() * 3;
 		} else {
 			System.out.println("Mana insuficiente, " + getNome() + " atira uma flecha");
 			return getAtaque();
