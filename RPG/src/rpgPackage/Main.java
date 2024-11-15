@@ -3,8 +3,11 @@ package rpgPackage;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Heroi jogador = new Guerreiro("Arthur");
+		Inimigo inimigo = new Goblin();
+		Combate combate = new Combate(jogador, inimigo);
+		
+		combate.iniciarCombate();
 	}
 
 }

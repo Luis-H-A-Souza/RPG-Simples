@@ -39,6 +39,7 @@ public class Combate {
 				System.out.println("\nAção Invalida!\n");
 			}
 		} while (aux != 1 && aux != 2);
+		System.out.println();
 		if (aux == 1) {
 			int dano = heroi.atacar();
 			inimigo.receberDano(dano);
