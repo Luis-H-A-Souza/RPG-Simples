@@ -34,8 +34,8 @@ class Orc extends Inimigo {
 	}
 }
 
-class Dragão extends Inimigo {
-	public Dragão() {
+class Dragao extends Inimigo {
+	public Dragao() {
 		super("Dragão", 100, 30, 10);
 	}
 

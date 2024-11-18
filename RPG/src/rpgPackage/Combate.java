@@ -57,8 +57,13 @@ public class Combate {
 		this.heroi = heroi;
 		this.inimigo = inimigo;
 		System.out.println(heroi.getNome() + " Versus " + inimigo.getNome() + "\n");
-		System.out.println(inimigo.getNome() + ":\nVida: " + inimigo.getVida() + "\nAtaque: " + inimigo.getAtaque()
+		fc.Leitura();
+		System.out.println(heroi.getNome() + "\nVida: " + heroi.getVida() + "\nAtaque: " + heroi.getAtaque()
+				+ "\nDefesa: " + heroi.getDefesa() + "\nMana: " + heroi.getMana() + "\n");
+		fc.Leitura();
+		System.out.println(inimigo.getNome() + "\nVida: " + inimigo.getVida() + "\nAtaque: " + inimigo.getAtaque()
 				+ "\nDefesa: " + inimigo.getDefesa() + "\n");
+		fc.Leitura();
 		do {
 			turnoJogador();
 			fc.Leitura();
@@ -71,7 +76,7 @@ public class Combate {
 		if (heroi.estaVivo()) {
 			System.out.println(heroi.getNome() + " Venceu o combate!");
 		} else {
-			System.out.println(inimigo.getNome() + "Venceu o combate!");
+			System.out.println(inimigo.getNome() + " Venceu o combate!");
 		}
 	}
 }

@@ -22,8 +22,8 @@ public abstract class Heroi extends Personagem {
 
 class Guerreiro extends Heroi {
 
-	public Guerreiro(String nome) {
-		super(nome, 100, 20, 20, 30);
+	public Guerreiro() {
+		super("Arthur, o Guerreiro", 100, 20, 10, 30);
 	}
 
 	@Override
@@ -47,8 +47,8 @@ class Guerreiro extends Heroi {
 
 class Mago extends Heroi {
 
-	public Mago(String nome) {
-		super(nome, 50, 25, 5, 100);
+	public Mago() {
+		super("Merlin, o Mago", 60, 25, 5, 100);
 	}
 
 	@Override
@@ -73,8 +73,8 @@ class Mago extends Heroi {
 }
 
 class Arqueiro extends Heroi {
-	public Arqueiro(String nome) {
-		super(nome, 75, 15, 7, 60);
+	public Arqueiro() {
+		super("Robin, o Arqueiro", 75, 15, 7, 60);
 	}
 	
 	@Override
